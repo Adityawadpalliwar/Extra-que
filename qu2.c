@@ -8,30 +8,38 @@ struct table
 
 int main()
 {
-    int m,i,j,x,y;
+    int m,i,j,x,y,b,v;
     printf("enter the value of m: ");
     scanf("%d",&m);
 
-    struct table mat[m][m];
+    struct table mat[m+1][m+1];
 
     
     printf(" enter i and j : ");
     scanf("%d %d",&x,&y);
+    
 
-printf("enter the elemnt of the matrix");
-for(i=0;i<m;i++)
- {
- for(j=0;j<m;j++)
-{
-    scanf("%d%c%d",&mat[i][j].a,&mat[i][j].b,&mat[i][j].c);
-}
-}
+    printf("enter the elements of the matrix in row wise fasion \n");
+    for(i=1;i<m+1;i++)
+     {
+        for(j=1;j<m+1;j++)
+        {
+         scanf("%d%c%d",&mat[i][j].a,&mat[i][j].b,&mat[i][j].c);
+         mat[i][j].a;
+         mat[i][j].b;
+
+        }
+    }
     int nj = x*y;
+    
+
     int k=0;
-    while(k<nj)
+    while(k<nj-1)
     {
-        x=mat[x][y].a;
-        y=mat[x][y].c;
+        b=mat[x][y].a;
+        v=mat[x][y].c;
+        x=b;
+        y=v;
         k++;
     }
 
